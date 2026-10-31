@@ -1,0 +1,114 @@
+module.exports = {
+  ROLES: {
+    ADMIN: 'ADMIN',
+    STAFF: 'STAFF',
+    CUSTOMER: 'CUSTOMER',
+  },
+
+  BILLING_FREQUENCY: {
+    DAILY: 'DAILY',
+    WEEKLY: 'WEEKLY',
+    MONTHLY: 'MONTHLY',
+    YEARLY: 'YEARLY',
+  },
+
+  PRODUCT_TYPE: {
+    SERVICE: 'SERVICE',
+    CONSUMABLE: 'CONSUMABLE',
+  },
+
+  PRODUCT_STATUS: {
+    ACTIVE: 'ACTIVE',
+    ARCHIVED: 'ARCHIVED',
+  },
+
+  PLAN_STATUS: {
+    ACTIVE: 'ACTIVE',
+    ARCHIVED: 'ARCHIVED',
+  },
+
+  CUSTOMER_STATUS: {
+    ACTIVE: 'ACTIVE',
+    INACTIVE: 'INACTIVE',
+  },
+
+  QUOTATION_STATUS: {
+    DRAFT: 'DRAFT',
+    QUOTATION: 'QUOTATION',
+    CONFIRMED: 'CONFIRMED',
+    REJECTED: 'REJECTED',
+    EXPIRED: 'EXPIRED',
+  },
+
+  SUBSCRIPTION_STATUS: {
+    DRAFT: 'DRAFT',
+    QUOTATION: 'QUOTATION',
+    CONFIRMED: 'CONFIRMED',
+    ACTIVE: 'ACTIVE',
+    PAUSED: 'PAUSED',
+    CLOSED: 'CLOSED',
+    EXPIRED: 'EXPIRED',
+  },
+
+  INVOICE_STATUS: {
+    DRAFT: 'DRAFT',
+    CONFIRMED: 'CONFIRMED',
+    PAID: 'PAID',
+    OVERDUE: 'OVERDUE',
+    CANCELLED: 'CANCELLED',
+  },
+
+  PAYMENT_STATUS: {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED',
+    PENDING: 'PENDING',
+  },
+
+  PAYMENT_METHOD: {
+    UPI: 'UPI',
+    CARD: 'CARD',
+    BANK_TRANSFER: 'BANK_TRANSFER',
+    CASH: 'CASH',
+    OTHER: 'OTHER',
+  },
+
+  DISCOUNT_TYPE: {
+    PERCENTAGE: 'PERCENTAGE',
+    FIXED_AMOUNT: 'FIXED_AMOUNT',
+  },
+
+  DISCOUNT_STATUS: {
+    ACTIVE: 'ACTIVE',
+    EXPIRED: 'EXPIRED',
+    ARCHIVED: 'ARCHIVED',
+  },
+
+  TAX_STATUS: {
+    ACTIVE: 'ACTIVE',
+    INACTIVE: 'INACTIVE',
+  },
+
+  TAX_TYPE: {
+    INCLUSIVE: 'INCLUSIVE',
+    EXCLUSIVE: 'EXCLUSIVE',
+  },
+
+  // Valid lifecycle transitions for subscriptions
+  SUBSCRIPTION_TRANSITIONS: {
+    DRAFT: ['CONFIRMED'],
+    QUOTATION: ['CONFIRMED', 'CLOSED'],
+    CONFIRMED: ['ACTIVE', 'CLOSED'],
+    ACTIVE: ['PAUSED', 'CLOSED', 'EXPIRED'],
+    PAUSED: ['ACTIVE', 'CLOSED'],
+    CLOSED: [],
+    EXPIRED: ['ACTIVE'], // renewal
+  },
+
+  PAGINATION: {
+    DEFAULT_PAGE: 1,
+    DEFAULT_LIMIT: 20,
+    MAX_LIMIT: 100,
+  },
+
+  PASSWORD_REGEX: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/,
+};
