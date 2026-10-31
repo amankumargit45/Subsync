@@ -1,0 +1,56 @@
+# Dependency directories
+node_modules/
+*/node_modules/
+
+# Environment files and credentials
+.env
+.env.local
+.env.*.local
+*.env
+server/.env
+subsync_frontend/.env
+!.env.example
+!server/.env.example
+!subsync_frontend/.env.example
+
+# Production & Build outputs
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
+
+# Debug logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Editor and OS files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Caches and Temp
+.cache/
+.eslintcache
+.oxlintcache
+tmp/
+temp/
+
